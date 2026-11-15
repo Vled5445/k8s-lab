@@ -1,0 +1,53 @@
+NAME       READY   UP-TO-DATE   AVAILABLE   AGE
+calc-app   5/5     5            5           53s
+NAME                        READY   STATUS        RESTARTS   AGE   IP            NODE       NOMINATED NODE   READINESS GATES
+calc-app-58b78d4568-mdxv8   1/1     Terminating   0          22s   10.244.0.9    minikube   <none>           <none>
+calc-app-58b78d4568-t8dsx   1/1     Terminating   0          23s   10.244.0.8    minikube   <none>           <none>
+calc-app-58b78d4568-w8v4k   1/1     Terminating   0          22s   10.244.0.10   minikube   <none>           <none>
+calc-app-6f4d77fd67-5vfjr   1/1     Running       0          20s   10.244.0.12   minikube   <none>           <none>
+calc-app-6f4d77fd67-9xthr   1/1     Running       0          21s   10.244.0.11   minikube   <none>           <none>
+calc-app-6f4d77fd67-bd2j9   1/1     Running       0          1s    10.244.0.15   minikube   <none>           <none>
+calc-app-6f4d77fd67-hpngt   1/1     Running       0          1s    10.244.0.14   minikube   <none>           <none>
+calc-app-6f4d77fd67-jm5h8   1/1     Running       0          20s   10.244.0.13   minikube   <none>           <none>
+calc-app-6f4d77fd67-n2z22   1/1     Terminating   0          53s   10.244.0.6    minikube   <none>           <none>
+calc-app-6f4d77fd67-nlbht   1/1     Terminating   0          53s   10.244.0.5    minikube   <none>           <none>
+calc-app-6f4d77fd67-sdwl5   1/1     Terminating   0          53s   10.244.0.4    minikube   <none>           <none>
+Name:                     calc-app
+Namespace:                demo
+Labels:                   <none>
+Annotations:              <none>
+Selector:                 app=calc-app
+Type:                     NodePort
+IP Family Policy:         SingleStack
+IP Families:              IPv4
+IP:                       10.111.70.199
+IPs:                      10.111.70.199
+Port:                     <unset>  5000/TCP
+TargetPort:               5000/TCP
+NodePort:                 <unset>  30500/TCP
+Endpoints:                10.244.0.11:5000,10.244.0.12:5000,10.244.0.13:5000 + 2 more...
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Internal Traffic Policy:  Cluster
+Events:                   <none>
+NAME       READY   UP-TO-DATE   AVAILABLE   AGE
+calc-app   2/2     2            2           53s
+NAME       READY   UP-TO-DATE   AVAILABLE   AGE
+calc-app   3/3     3            3           54s
+NAME             ADDRESSTYPE   PORTS   ENDPOINTS                                         AGE
+calc-app-6hr7c   IPv4          5000    10.244.0.20,10.244.0.21,10.244.0.19 + 2 more...   2m33s
+NAME                        READY   STATUS        RESTARTS   AGE   IP            NODE       NOMINATED NODE   READINESS GATES
+calc-app-6f4d77fd67-62thz   1/1     Terminating   0          1s    10.244.0.23   minikube   <none>           <none>
+calc-app-6f4d77fd67-b6ggv   1/1     Running       0          36s   10.244.0.20   minikube   <none>           <none>
+calc-app-6f4d77fd67-ddj75   1/1     Running       0          36s   10.244.0.19   minikube   <none>           <none>
+calc-app-6f4d77fd67-fmcqq   1/1     Terminating   0          1s    10.244.0.24   minikube   <none>           <none>
+calc-app-6f4d77fd67-k82pr   1/1     Running       0          36s   10.244.0.21   minikube   <none>           <none>
+10.244.0.20 ready=true
+10.244.0.21 ready=true
+10.244.0.19 ready=true
+10.244.0.26 ready=true
+10.244.0.19
+10.244.0.20
+10.244.0.21
+10.244.0.27
+10.244.0.28

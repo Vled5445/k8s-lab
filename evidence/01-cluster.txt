@@ -1,0 +1,115 @@
+Sun Nov 15 12:39:07 MSK 2026
+Kubernetes control plane is running at https://127.0.0.1:50763
+CoreDNS is running at https://127.0.0.1:50763/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+
+To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
+NAME       STATUS   ROLES           AGE   VERSION   INTERNAL-IP    EXTERNAL-IP   OS-IMAGE                         KERNEL-VERSION             CONTAINER-RUNTIME
+minikube   Ready    control-plane   67s   v1.37.0   192.168.49.2   <none>        Debian GNU/Linux 12 (bookworm)   6.12.54-linuxkit (arm64)   containerd://2.3.4
+Name:               minikube
+Roles:              control-plane
+Labels:             beta.kubernetes.io/arch=arm64
+                    beta.kubernetes.io/os=linux
+                    kubernetes.io/arch=arm64
+                    kubernetes.io/hostname=minikube
+                    kubernetes.io/os=linux
+                    minikube.k8s.io/commit=7a9f6a841470a207de8cf4bafcccee0969d8ba10
+                    minikube.k8s.io/name=minikube
+                    minikube.k8s.io/primary=true
+                    minikube.k8s.io/updated_at=2026_11_15T12_38_05_0700
+                    minikube.k8s.io/version=v1.39.0
+                    node-role.kubernetes.io/control-plane=
+                    node.kubernetes.io/exclude-from-external-load-balancers=
+Annotations:        node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Sun, 15 Nov 2026 12:38:02 +0300
+Taints:             <none>
+Unschedulable:      false
+Lease:
+  HolderIdentity:  minikube
+  AcquireTime:     <unset>
+  RenewTime:       Sun, 15 Nov 2026 12:39:06 +0300
+Conditions:
+  Type             Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----             ------  -----------------                 ------------------                ------                       -------
+  MemoryPressure   False   Sun, 15 Nov 2026 12:39:05 +0300   Sun, 15 Nov 2026 12:38:01 +0300   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure     False   Sun, 15 Nov 2026 12:39:05 +0300   Sun, 15 Nov 2026 12:38:01 +0300   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure      False   Sun, 15 Nov 2026 12:39:05 +0300   Sun, 15 Nov 2026 12:38:01 +0300   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready            True    Sun, 15 Nov 2026 12:39:05 +0300   Sun, 15 Nov 2026 12:38:43 +0300   KubeletReady                 kubelet is posting ready status
+Addresses:
+  InternalIP:  192.168.49.2
+  Hostname:    minikube
+Capacity:
+  cpu:                8
+  ephemeral-storage:  62671097856
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  hugepages-32Mi:     0
+  hugepages-64Ki:     0
+  memory:             6067048Ki
+  pods:               110
+Allocatable:
+  cpu:                8
+  ephemeral-storage:  62671097856
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  hugepages-32Mi:     0
+  hugepages-64Ki:     0
+  memory:             6067048Ki
+  pods:               110
+System Info:
+  Machine ID:                 c7552358bf1aab9f1f21b3de6a971616
+  System UUID:                c7552358bf1aab9f1f21b3de6a971616
+  Boot ID:                    b195a6fe-c8ec-47d7-a32c-c8ddd563cb94
+  Kernel Version:             6.12.54-linuxkit
+  OS Image:                   Debian GNU/Linux 12 (bookworm)
+  Operating System:           linux
+  Architecture:               arm64
+  Container Runtime Version:  containerd://2.3.4
+  Kubelet Version:            v1.37.0
+  Kube-Proxy Version:         
+PodCIDR:                      10.244.0.0/24
+PodCIDRs:                     10.244.0.0/24
+Non-terminated Pods:          (8 in total)
+  Namespace                   Name                                CPU Requests  CPU Limits  Memory Requests  Memory Limits  Age
+  ---------                   ----                                ------------  ----------  ---------------  -------------  ---
+  kube-system                 coredns-559f6c778d-plzqm            100m (1%)     0 (0%)      70Mi (1%)        170Mi (2%)     58s
+  kube-system                 etcd-minikube                       100m (1%)     0 (0%)      100Mi (1%)       0 (0%)         65s
+  kube-system                 kindnet-s5ktx                       100m (1%)     100m (1%)   50Mi (0%)        50Mi (0%)      59s
+  kube-system                 kube-apiserver-minikube             250m (3%)     0 (0%)      0 (0%)           0 (0%)         65s
+  kube-system                 kube-controller-manager-minikube    200m (2%)     0 (0%)      0 (0%)           0 (0%)         65s
+  kube-system                 kube-proxy-669nz                    0 (0%)        0 (0%)      0 (0%)           0 (0%)         59s
+  kube-system                 kube-scheduler-minikube             100m (1%)     0 (0%)      0 (0%)           0 (0%)         65s
+  kube-system                 storage-provisioner                 0 (0%)        0 (0%)      0 (0%)           0 (0%)         63s
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests    Limits
+  --------           --------    ------
+  cpu                850m (10%)  100m (1%)
+  memory             220Mi (3%)  220Mi (3%)
+  ephemeral-storage  0 (0%)      0 (0%)
+  hugepages-1Gi      0 (0%)      0 (0%)
+  hugepages-2Mi      0 (0%)      0 (0%)
+  hugepages-32Mi     0 (0%)      0 (0%)
+  hugepages-64Ki     0 (0%)      0 (0%)
+Events:
+  Type    Reason                   Age   From             Message
+  ----    ------                   ----  ----             -------
+  Normal  NodeHasSufficientMemory  65s   kubelet          Node minikube status is now: NodeHasSufficientMemory
+  Normal  NodeHasNoDiskPressure    65s   kubelet          Node minikube status is now: NodeHasNoDiskPressure
+  Normal  NodeHasSufficientPID     65s   kubelet          Node minikube status is now: NodeHasSufficientPID
+  Normal  RegisteredNode           60s   node-controller  Node minikube event: Registered Node minikube in Controller
+  Normal  NodeReady                26s   kubelet          Node minikube status is now: NodeReady
+NAME              STATUS   AGE
+default           Active   67s
+kube-node-lease   Active   67s
+kube-public       Active   67s
+kube-system       Active   67s
+NAMESPACE     NAME                               READY   STATUS    RESTARTS   AGE   IP             NODE       NOMINATED NODE   READINESS GATES
+kube-system   coredns-559f6c778d-plzqm           1/1     Running   0          58s   10.244.0.2     minikube   <none>           <none>
+kube-system   etcd-minikube                      1/1     Running   0          65s   192.168.49.2   minikube   <none>           <none>
+kube-system   kindnet-s5ktx                      1/1     Running   0          59s   192.168.49.2   minikube   <none>           <none>
+kube-system   kube-apiserver-minikube            1/1     Running   0          65s   192.168.49.2   minikube   <none>           <none>
+kube-system   kube-controller-manager-minikube   1/1     Running   0          65s   192.168.49.2   minikube   <none>           <none>
+kube-system   kube-proxy-669nz                   1/1     Running   0          59s   192.168.49.2   minikube   <none>           <none>
+kube-system   kube-scheduler-minikube            1/1     Running   0          65s   192.168.49.2   minikube   <none>           <none>
+kube-system   storage-provisioner                1/1     Running   0          63s   192.168.49.2   minikube   <none>           <none>

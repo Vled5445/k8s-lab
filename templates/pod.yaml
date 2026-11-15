@@ -13,12 +13,12 @@ kind: Pod               # тип объекта. Мы создаём именн�
 
 metadata:
   # Придумайте имя пода. Договоримся: имя = calc-pod
-  name: <ВПИШИТЕ имя пода>
+  name: calc-pod
   labels:
     # Label — это "бирка" на поде. Она пригодится в задании 4,
     # где Service будет искать поды именно по этой бирке.
     # Договоримся: app: calc-app
-    app: <ВПИШИТЕ label приложения>
+    app: calc-app
 
 spec:
   containers:
@@ -26,15 +26,15 @@ spec:
       # Образ мы собрали из папки ../app и загрузили в minikube:
       #   docker build -t calc-app:v1 ../app
       #   minikube image load calc-app:v1
-      image: <ВПИШИТЕ образ:тег>
+      image: calc-app:v1
       # ВАЖНО: образ локальный, в интернете его нет.
       # Какая политика не даст kubelet тянуть образ из сети?
       # (Always / IfNotPresent / Never — вспомните лекцию)
-      imagePullPolicy: <ВПИШИТЕ политику>
+      imagePullPolicy: Never
       ports:
         # На каком порту слушает наше приложение?
         # Подсмотрите в ../app/app.py, если забыли.
-        - containerPort: <ВПИШИТЕ порт>
+        - containerPort: 5000
 
 # ------------------------------------------------------------
 # После заполнения:

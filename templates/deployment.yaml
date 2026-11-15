@@ -13,32 +13,32 @@ apiVersion: apps/v1     # Deployment живёт в API-группе apps
 kind: Deployment
 
 metadata:
-  name: <ВПИШИТЕ имя deployment>        # договоримся: calc-app
-  namespace: <ВПИШИТЕ namespace>        # тот, что создали выше
+  name: calc-app        # договоримся: calc-app
+  namespace: demo        # тот, что создали выше
 
 spec:
   # Сколько копий приложения должно работать постоянно?
   # Для лабораторной — 3.
-  replicas: <ВПИШИТЕ число копий>
+  replicas: 3
 
   selector:
     matchLabels:
       # По этой бирке ReplicaSet узнает "свои" поды.
       # ДОЛЖНА совпадать с labels в template ниже — иначе кластер
       # отклонит манифест при проверке. Вспомните, почему?
-      app: <ВПИШИТЕ label>
+      app: calc-app
 
   template:               # шаблон, по которому создаются поды
     metadata:
       labels:
-        app: <ВПИШИТЕ label>            # тот же label, что выше!
+        app: calc-app            # тот же label, что выше!
     spec:
       containers:
         - name: calc-app
-          image: <ВПИШИТЕ образ:тег>     # как в задании 2
-          imagePullPolicy: <ВПИШИТЕ политику>   # и политика та же
+          image: calc-app:v1     # как в задании 2
+          imagePullPolicy: Never   # и политика та же
           ports:
-            - containerPort: <ВПИШИТЕ порт>
+            - containerPort: 5000
 
 # ------------------------------------------------------------
 # После заполнения:

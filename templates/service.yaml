@@ -12,28 +12,28 @@ apiVersion: v1
 kind: Service
 
 metadata:
-  name: <ВПИШИТЕ имя сервиса>           # договоримся: calc-app
-  namespace: <ВПИШИТЕ namespace>        # тот же, что у deployment
+  name: calc-app           # договоримся: calc-app
+  namespace: demo        # тот же, что у deployment
 
 spec:
   # Какой тип даёт доступ с ХОСТ-МАШИНЫ (снаружи кластера)?
   # Варианты: ClusterIP / NodePort / LoadBalancer.
   # Вспомните таблицу из лекции.
-  type: <ВПИШИТЕ тип>
+  type: NodePort
 
   selector:
     # СЕРДЦЕ этого файла. Сервис найдёт поды по этой бирке.
     # Загляните в templates/deployment.yaml: какой label у подов?
-    app: <ВПИШИТЕ label подов>
+    app: calc-app
 
   ports:
     # Три порта — не перепутайте:
     #   port       — на каком порту отвечает сам сервис внутри кластера
     #   targetPort — на какой порт подов он пересылает (см. задание 2!)
     #   nodePort   — порт на ноде для доступа снаружи (30000-32767)
-    - port: <ВПИШИТЕ порт сервиса>
-      targetPort: <ВПИШИТЕ порт контейнера>
-      nodePort: <ВПИШИТЕ nodePort>
+    - port: 5000
+      targetPort: 5000
+      nodePort: 30500
 
 # ------------------------------------------------------------
 # После заполнения:

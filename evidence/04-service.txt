@@ -1,0 +1,81 @@
+NAME       TYPE       CLUSTER-IP      EXTERNAL-IP   PORT(S)          AGE
+calc-app   NodePort   10.111.70.199   <none>        5000:30500/TCP   1s
+NAME                        READY   STATUS    RESTARTS   AGE   IP           NODE       NOMINATED NODE   READINESS GATES
+calc-app-6f4d77fd67-n2z22   1/1     Running   0          19s   10.244.0.6   minikube   <none>           <none>
+calc-app-6f4d77fd67-nlbht   1/1     Running   0          19s   10.244.0.5   minikube   <none>           <none>
+calc-app-6f4d77fd67-sdwl5   1/1     Running   0          19s   10.244.0.4   minikube   <none>           <none>
+Name:                     calc-app
+Namespace:                demo
+Labels:                   <none>
+Annotations:              <none>
+Selector:                 app=calc-app
+Type:                     NodePort
+IP Family Policy:         SingleStack
+IP Families:              IPv4
+IP:                       10.111.70.199
+IPs:                      10.111.70.199
+Port:                     <unset>  5000/TCP
+TargetPort:               5000/TCP
+NodePort:                 <unset>  30500/TCP
+Endpoints:                10.244.0.6:5000,10.244.0.4:5000,10.244.0.5:5000
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Internal Traffic Policy:  Cluster
+Events:                   <none>
+{"result":5.0}
+{"result":42.0}
+{"result":42.0}
+{"result":42.0}
+{"result":42.0}
+{"result":42.0}
+{"result":42.0}
+{"result":42.0}
+{"result":42.0}
+{"result":42.0}
+{"result":42.0}
+{"result":42.0}
+{"result":42.0}
+[pod/calc-app-6f4d77fd67-jm5h8/calc-app]  * Running on http://127.0.0.1:5000
+[pod/calc-app-6f4d77fd67-jm5h8/calc-app]  * Running on http://10.244.0.13:5000
+[pod/calc-app-6f4d77fd67-jm5h8/calc-app] [33mPress CTRL+C to quit[0m
+[pod/calc-app-6f4d77fd67-jm5h8/calc-app] 127.0.0.1 - - [15/Nov/2026 09:42:16] "GET /calc?op=mul&a=6&b=7 HTTP/1.1" 200 -
+[pod/calc-app-6f4d77fd67-jm5h8/calc-app] 127.0.0.1 - - [15/Nov/2026 09:42:16] "GET /calc?op=mul&a=6&b=7 HTTP/1.1" 200 -
+[pod/calc-app-6f4d77fd67-jm5h8/calc-app] 127.0.0.1 - - [15/Nov/2026 09:42:16] "GET /calc?op=mul&a=6&b=7 HTTP/1.1" 200 -
+[pod/calc-app-6f4d77fd67-jm5h8/calc-app] 127.0.0.1 - - [15/Nov/2026 09:42:16] "GET /calc?op=mul&a=6&b=7 HTTP/1.1" 200 -
+[pod/calc-app-6f4d77fd67-jm5h8/calc-app] 127.0.0.1 - - [15/Nov/2026 09:42:16] "GET /calc?op=mul&a=6&b=7 HTTP/1.1" 200 -
+[pod/calc-app-6f4d77fd67-jm5h8/calc-app] 127.0.0.1 - - [15/Nov/2026 09:42:16] "GET /calc?op=mul&a=6&b=7 HTTP/1.1" 200 -
+[pod/calc-app-6f4d77fd67-jm5h8/calc-app] 127.0.0.1 - - [15/Nov/2026 09:42:16] "GET /calc?op=mul&a=6&b=7 HTTP/1.1" 200 -
+[pod/calc-app-6f4d77fd67-jm5h8/calc-app] 127.0.0.1 - - [15/Nov/2026 09:42:16] "GET /calc?op=mul&a=6&b=7 HTTP/1.1" 200 -
+[pod/calc-app-6f4d77fd67-jm5h8/calc-app] 127.0.0.1 - - [15/Nov/2026 09:42:16] "GET /calc?op=mul&a=6&b=7 HTTP/1.1" 200 -
+[pod/calc-app-6f4d77fd67-jm5h8/calc-app] 127.0.0.1 - - [15/Nov/2026 09:42:16] "GET /calc?op=mul&a=6&b=7 HTTP/1.1" 200 -
+[pod/calc-app-6f4d77fd67-jm5h8/calc-app] 127.0.0.1 - - [15/Nov/2026 09:42:16] "GET /calc?op=mul&a=6&b=7 HTTP/1.1" 200 -
+[pod/calc-app-6f4d77fd67-jm5h8/calc-app] 127.0.0.1 - - [15/Nov/2026 09:42:16] "GET /calc?op=mul&a=6&b=7 HTTP/1.1" 200 -
+[pod/calc-app-6f4d77fd67-n6gwf/calc-app]  * Serving Flask app 'app'
+[pod/calc-app-6f4d77fd67-n6gwf/calc-app]  * Debug mode: off
+[pod/calc-app-6f4d77fd67-n6gwf/calc-app] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+[pod/calc-app-6f4d77fd67-n6gwf/calc-app]  * Running on all addresses (0.0.0.0)
+[pod/calc-app-6f4d77fd67-n6gwf/calc-app]  * Running on http://127.0.0.1:5000
+[pod/calc-app-6f4d77fd67-n6gwf/calc-app]  * Running on http://10.244.0.17:5000
+[pod/calc-app-6f4d77fd67-n6gwf/calc-app] [33mPress CTRL+C to quit[0m
+[pod/calc-app-6f4d77fd67-t8tqc/calc-app]  * Serving Flask app 'app'
+[pod/calc-app-6f4d77fd67-t8tqc/calc-app]  * Debug mode: off
+[pod/calc-app-6f4d77fd67-t8tqc/calc-app] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+[pod/calc-app-6f4d77fd67-t8tqc/calc-app]  * Running on all addresses (0.0.0.0)
+[pod/calc-app-6f4d77fd67-t8tqc/calc-app]  * Running on http://127.0.0.1:5000
+[pod/calc-app-6f4d77fd67-t8tqc/calc-app]  * Running on http://10.244.0.16:5000
+[pod/calc-app-6f4d77fd67-t8tqc/calc-app] [33mPress CTRL+C to quit[0m
+{"result":42.0}
+{"result":42.0}
+{"result":42.0}
+{"result":42.0}
+{"result":42.0}
+{"result":42.0}
+{"result":42.0}
+{"result":42.0}
+{"result":42.0}
+{"result":42.0}
+{"result":42.0}
+{"result":42.0}
+{"result":42.0}
+{"result":42.0}
+{"result":42.0}

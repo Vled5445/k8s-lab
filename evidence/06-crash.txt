@@ -1,0 +1,173 @@
+NAME         READY   STATUS   RESTARTS      AGE   IP            NODE       NOMINATED NODE   READINESS GATES
+crash-demo   0/1     Error    2 (19s ago)   34s   10.244.0.18   minikube   <none>           <none>
+Name:             crash-demo
+Namespace:        demo
+Priority:         0
+Service Account:  default
+Node:             minikube/192.168.49.2
+Start Time:       Sun, 15 Nov 2026 12:41:42 +0300
+Labels:           run=crash-demo
+Annotations:      <none>
+Status:           Running
+IP:               10.244.0.18
+IPs:
+  IP:  10.244.0.18
+Containers:
+  crash-demo:
+    Container ID:  containerd://5f3e1d9cb76acd9e79153f78f5aa232da4b83b0299c4db0747604b1d2e8293e3
+    Image:         python:3.12-slim
+    Image ID:      docker.io/library/python@sha256:5e2bdb1b0d542d5039cffb8181c65930093949194a65c365dfb1b0fe13a4fa5b
+    Port:          <none>
+    Host Port:     <none>
+    Args:
+      python3
+      -c
+      import time; time.sleep(3); exit(1)
+    State:          Terminated
+      Reason:       Error
+      Exit Code:    1
+      Started:      Sun, 15 Nov 2026 12:42:09 +0300
+      Finished:     Sun, 15 Nov 2026 12:42:12 +0300
+    Last State:     Terminated
+      Reason:       Error
+      Exit Code:    1
+      Started:      Sun, 15 Nov 2026 12:41:53 +0300
+      Finished:     Sun, 15 Nov 2026 12:41:57 +0300
+    Ready:          False
+    Restart Count:  2
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-7w7t9 (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  kube-api-access-7w7t9:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    Optional:                false
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason     Age               From               Message
+  ----     ------     ----              ----               -------
+  Normal   Scheduled  34s               default-scheduler  Successfully assigned demo/crash-demo to minikube
+  Normal   Pulling    33s               kubelet            Pulling image "python:3.12-slim"
+  Normal   Pulled     27s               kubelet            Successfully pulled image "python:3.12-slim" in 6.645s (6.645s including waiting). Image size: 43560716 bytes.
+  Normal   Created    7s (x3 over 27s)  kubelet            Container created
+  Normal   Started    7s (x3 over 26s)  kubelet            Container started
+  Normal   Pulled     7s (x2 over 23s)  kubelet            Container image "python:3.12-slim" already present on machine and can be accessed by the pod
+  Warning  BackOff    4s (x2 over 19s)  kubelet            Back-off restarting failed container crash-demo in pod crash-demo_demo(4b01be47-811f-464e-80ed-a9ebc4ee8c56)
+LAST SEEN   TYPE      REASON              OBJECT                           MESSAGE
+116s        Normal    ScalingReplicaSet   deployment/calc-app              Scaled up replica set calc-app-6f4d77fd67 from 0 to 3
+116s        Normal    Scheduled           pod/calc-app-6f4d77fd67-n2z22    Successfully assigned demo/calc-app-6f4d77fd67-n2z22 to minikube
+116s        Normal    Scheduled           pod/calc-app-6f4d77fd67-nlbht    Successfully assigned demo/calc-app-6f4d77fd67-nlbht to minikube
+116s        Normal    Scheduled           pod/calc-app-6f4d77fd67-sdwl5    Successfully assigned demo/calc-app-6f4d77fd67-sdwl5 to minikube
+116s        Normal    SuccessfulCreate    replicaset/calc-app-6f4d77fd67   Created pod: calc-app-6f4d77fd67-sdwl5
+116s        Normal    SuccessfulCreate    replicaset/calc-app-6f4d77fd67   Created pod: calc-app-6f4d77fd67-nlbht
+116s        Normal    SuccessfulCreate    replicaset/calc-app-6f4d77fd67   Created pod: calc-app-6f4d77fd67-n2z22
+115s        Normal    Started             pod/calc-app-6f4d77fd67-sdwl5    Container started
+115s        Normal    Pulled              pod/calc-app-6f4d77fd67-sdwl5    Container image "calc-app:v1" already present on machine and can be accessed by the pod
+115s        Normal    Created             pod/calc-app-6f4d77fd67-n2z22    Container created
+115s        Normal    Started             pod/calc-app-6f4d77fd67-n2z22    Container started
+115s        Normal    Pulled              pod/calc-app-6f4d77fd67-nlbht    Container image "calc-app:v1" already present on machine and can be accessed by the pod
+115s        Normal    Created             pod/calc-app-6f4d77fd67-nlbht    Container created
+115s        Normal    Started             pod/calc-app-6f4d77fd67-nlbht    Container started
+115s        Normal    Pulled              pod/calc-app-6f4d77fd67-n2z22    Container image "calc-app:v1" already present on machine and can be accessed by the pod
+115s        Normal    Created             pod/calc-app-6f4d77fd67-sdwl5    Container created
+86s         Normal    SuccessfulCreate    replicaset/calc-app-58b78d4568   Created pod: calc-app-58b78d4568-t8dsx
+86s         Normal    Started             pod/calc-app-58b78d4568-t8dsx    Container started
+86s         Normal    Pulled              pod/calc-app-58b78d4568-t8dsx    Container image "calc-app:v2" already present on machine and can be accessed by the pod
+86s         Normal    Scheduled           pod/calc-app-58b78d4568-t8dsx    Successfully assigned demo/calc-app-58b78d4568-t8dsx to minikube
+86s         Normal    ScalingReplicaSet   deployment/calc-app              Scaled down replica set calc-app-6f4d77fd67 from 3 to 2
+86s         Normal    ScalingReplicaSet   deployment/calc-app              Scaled up replica set calc-app-58b78d4568 from 0 to 1
+86s         Normal    Created             pod/calc-app-58b78d4568-t8dsx    Container created
+85s         Normal    SuccessfulCreate    replicaset/calc-app-58b78d4568   Created pod: calc-app-58b78d4568-w8v4k
+85s         Normal    SuccessfulCreate    replicaset/calc-app-58b78d4568   Created pod: calc-app-58b78d4568-mdxv8
+85s         Normal    Pulled              pod/calc-app-58b78d4568-mdxv8    Container image "calc-app:v2" already present on machine and can be accessed by the pod
+85s         Normal    Scheduled           pod/calc-app-58b78d4568-w8v4k    Successfully assigned demo/calc-app-58b78d4568-w8v4k to minikube
+85s         Normal    SuccessfulDelete    replicaset/calc-app-6f4d77fd67   Deleted pod: calc-app-6f4d77fd67-nlbht
+85s         Normal    SuccessfulDelete    replicaset/calc-app-6f4d77fd67   Deleted pod: calc-app-6f4d77fd67-sdwl5
+85s         Normal    Scheduled           pod/calc-app-58b78d4568-mdxv8    Successfully assigned demo/calc-app-58b78d4568-mdxv8 to minikube
+85s         Normal    ScalingReplicaSet   deployment/calc-app              Scaled up replica set calc-app-58b78d4568 from 1 to 2
+85s         Normal    Created             pod/calc-app-58b78d4568-mdxv8    Container created
+85s         Normal    Killing             pod/calc-app-6f4d77fd67-sdwl5    Stopping container calc-app
+85s         Normal    ScalingReplicaSet   deployment/calc-app              Scaled down replica set calc-app-6f4d77fd67 from 2 to 1
+85s         Normal    Killing             pod/calc-app-6f4d77fd67-nlbht    Stopping container calc-app
+85s         Normal    ScalingReplicaSet   deployment/calc-app              Scaled up replica set calc-app-58b78d4568 from 2 to 3
+85s         Normal    Started             pod/calc-app-58b78d4568-mdxv8    Container started
+84s         Normal    SuccessfulCreate    replicaset/calc-app-6f4d77fd67   Created pod: calc-app-6f4d77fd67-9xthr
+84s         Normal    Started             pod/calc-app-58b78d4568-w8v4k    Container started
+84s         Normal    Created             pod/calc-app-58b78d4568-w8v4k    Container created
+84s         Normal    Pulled              pod/calc-app-58b78d4568-w8v4k    Container image "calc-app:v2" already present on machine and can be accessed by the pod
+84s         Normal    ScalingReplicaSet   deployment/calc-app              Scaled up replica set calc-app-6f4d77fd67 from 0 to 1
+84s         Normal    Killing             pod/calc-app-6f4d77fd67-n2z22    Stopping container calc-app
+84s         Normal    Scheduled           pod/calc-app-6f4d77fd67-9xthr    Successfully assigned demo/calc-app-6f4d77fd67-9xthr to minikube
+84s         Normal    ScalingReplicaSet   deployment/calc-app              Scaled down replica set calc-app-6f4d77fd67 from 1 to 0
+84s         Normal    SuccessfulDelete    replicaset/calc-app-6f4d77fd67   Deleted pod: calc-app-6f4d77fd67-n2z22
+83s         Normal    SuccessfulCreate    replicaset/calc-app-6f4d77fd67   Created pod: calc-app-6f4d77fd67-5vfjr
+83s         Normal    SuccessfulDelete    replicaset/calc-app-58b78d4568   Deleted pod: calc-app-58b78d4568-mdxv8
+83s         Normal    ScalingReplicaSet   deployment/calc-app              Scaled down replica set calc-app-58b78d4568 from 3 to 2
+83s         Normal    Killing             pod/calc-app-58b78d4568-mdxv8    Stopping container calc-app
+83s         Normal    Killing             pod/calc-app-58b78d4568-w8v4k    Stopping container calc-app
+83s         Normal    SuccessfulDelete    replicaset/calc-app-58b78d4568   Deleted pod: calc-app-58b78d4568-w8v4k
+83s         Normal    Scheduled           pod/calc-app-6f4d77fd67-5vfjr    Successfully assigned demo/calc-app-6f4d77fd67-5vfjr to minikube
+83s         Normal    Pulled              pod/calc-app-6f4d77fd67-5vfjr    Container image "calc-app:v1" already present on machine and can be accessed by the pod
+83s         Normal    Scheduled           pod/calc-app-6f4d77fd67-jm5h8    Successfully assigned demo/calc-app-6f4d77fd67-jm5h8 to minikube
+83s         Normal    SuccessfulCreate    replicaset/calc-app-6f4d77fd67   Created pod: calc-app-6f4d77fd67-jm5h8
+83s         Normal    Created             pod/calc-app-6f4d77fd67-5vfjr    Container created
+83s         Normal    Started             pod/calc-app-6f4d77fd67-5vfjr    Container started
+83s         Normal    Pulled              pod/calc-app-6f4d77fd67-9xthr    Container image "calc-app:v1" already present on machine and can be accessed by the pod
+83s         Normal    Created             pod/calc-app-6f4d77fd67-9xthr    Container created
+83s         Normal    Started             pod/calc-app-6f4d77fd67-9xthr    Container started
+82s         Normal    SuccessfulDelete    replicaset/calc-app-58b78d4568   Deleted pod: calc-app-58b78d4568-t8dsx
+82s         Normal    Created             pod/calc-app-6f4d77fd67-jm5h8    Container created
+82s         Normal    Pulled              pod/calc-app-6f4d77fd67-jm5h8    Container image "calc-app:v1" already present on machine and can be accessed by the pod
+82s         Normal    Killing             pod/calc-app-58b78d4568-t8dsx    Stopping container calc-app
+82s         Normal    Started             pod/calc-app-6f4d77fd67-jm5h8    Container started
+64s         Normal    Scheduled           pod/calc-app-6f4d77fd67-hpngt    Successfully assigned demo/calc-app-6f4d77fd67-hpngt to minikube
+64s         Normal    Pulled              pod/calc-app-6f4d77fd67-bd2j9    Container image "calc-app:v1" already present on machine and can be accessed by the pod
+64s         Normal    Scheduled           pod/calc-app-6f4d77fd67-bd2j9    Successfully assigned demo/calc-app-6f4d77fd67-bd2j9 to minikube
+64s         Normal    Created             pod/calc-app-6f4d77fd67-bd2j9    Container created
+64s         Normal    SuccessfulCreate    replicaset/calc-app-6f4d77fd67   Created pod: calc-app-6f4d77fd67-bd2j9
+64s         Normal    Started             pod/calc-app-6f4d77fd67-bd2j9    Container started
+64s         Normal    Pulled              pod/calc-app-6f4d77fd67-hpngt    Container image "calc-app:v1" already present on machine and can be accessed by the pod
+64s         Normal    SuccessfulCreate    replicaset/calc-app-6f4d77fd67   Created pod: calc-app-6f4d77fd67-hpngt
+64s         Normal    Created             pod/calc-app-6f4d77fd67-hpngt    Container created
+64s         Normal    Started             pod/calc-app-6f4d77fd67-hpngt    Container started
+63s         Normal    ScalingReplicaSet   deployment/calc-app              Scaled up replica set calc-app-6f4d77fd67 from 2 to 3
+63s         Normal    Killing             pod/calc-app-6f4d77fd67-hpngt    Stopping container calc-app
+63s         Normal    Killing             pod/calc-app-6f4d77fd67-bd2j9    Stopping container calc-app
+63s         Normal    SuccessfulDelete    replicaset/calc-app-6f4d77fd67   Deleted pod: calc-app-6f4d77fd67-bd2j9
+63s         Normal    SuccessfulDelete    replicaset/calc-app-6f4d77fd67   Deleted pod: calc-app-6f4d77fd67-hpngt
+63s         Normal    SuccessfulDelete    replicaset/calc-app-6f4d77fd67   Deleted pod: calc-app-6f4d77fd67-5vfjr
+63s         Normal    SuccessfulCreate    replicaset/calc-app-6f4d77fd67   Created pod: calc-app-6f4d77fd67-t8tqc
+63s         Normal    Scheduled           pod/calc-app-6f4d77fd67-t8tqc    Successfully assigned demo/calc-app-6f4d77fd67-t8tqc to minikube
+63s         Normal    ScalingReplicaSet   deployment/calc-app              (combined from similar events): Scaled down replica set calc-app-6f4d77fd67 from 5 to 2
+63s         Normal    Killing             pod/calc-app-6f4d77fd67-5vfjr    Stopping container calc-app
+62s         Normal    Started             pod/calc-app-6f4d77fd67-t8tqc    Container started
+62s         Normal    Created             pod/calc-app-6f4d77fd67-t8tqc    Container created
+62s         Normal    Pulled              pod/calc-app-6f4d77fd67-t8tqc    Container image "calc-app:v1" already present on machine and can be accessed by the pod
+34s         Normal    Scheduled           pod/crash-demo                   Successfully assigned demo/crash-demo to minikube
+34s         Normal    Created             pod/calc-app-6f4d77fd67-n6gwf    Container created
+34s         Normal    Killing             pod/calc-app-6f4d77fd67-9xthr    Stopping container calc-app
+34s         Normal    Started             pod/calc-app-6f4d77fd67-n6gwf    Container started
+34s         Normal    SuccessfulCreate    replicaset/calc-app-6f4d77fd67   (combined from similar events): Created pod: calc-app-6f4d77fd67-n6gwf
+34s         Normal    Pulled              pod/calc-app-6f4d77fd67-n6gwf    Container image "calc-app:v1" already present on machine and can be accessed by the pod
+34s         Normal    Scheduled           pod/calc-app-6f4d77fd67-n6gwf    Successfully assigned demo/calc-app-6f4d77fd67-n6gwf to minikube
+33s         Normal    Pulling             pod/crash-demo                   Pulling image "python:3.12-slim"
+27s         Normal    Pulled              pod/crash-demo                   Successfully pulled image "python:3.12-slim" in 6.645s (6.645s including waiting). Image size: 43560716 bytes.
+7s          Normal    Created             pod/crash-demo                   Container created
+7s          Normal    Started             pod/crash-demo                   Container started
+7s          Normal    Pulled              pod/crash-demo                   Container image "python:3.12-slim" already present on machine and can be accessed by the pod
+4s          Warning   BackOff             pod/crash-demo                   Back-off restarting failed container crash-demo in pod crash-demo_demo(4b01be47-811f-464e-80ed-a9ebc4ee8c56)
+NAME         READY   STATUS   RESTARTS      AGE   IP            NODE       NOMINATED NODE   READINESS GATES
+crash-demo   0/1     Error    2 (37s ago)   52s   10.244.0.18   minikube   <none>           <none>

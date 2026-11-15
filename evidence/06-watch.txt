@@ -1,0 +1,27 @@
+NAME                        READY   STATUS        RESTARTS   AGE   IP            NODE       NOMINATED NODE   READINESS GATES
+calc-app-6f4d77fd67-5vfjr   1/1     Terminating   0          38s   10.244.0.12   minikube   <none>           <none>
+calc-app-6f4d77fd67-9xthr   1/1     Running       0          39s   10.244.0.11   minikube   <none>           <none>
+calc-app-6f4d77fd67-bd2j9   1/1     Terminating   0          19s   10.244.0.15   minikube   <none>           <none>
+calc-app-6f4d77fd67-hpngt   1/1     Terminating   0          19s   10.244.0.14   minikube   <none>           <none>
+calc-app-6f4d77fd67-jm5h8   1/1     Running       0          38s   10.244.0.13   minikube   <none>           <none>
+calc-app-6f4d77fd67-t8tqc   1/1     Running       0          18s   10.244.0.16   minikube   <none>           <none>
+calc-app-6f4d77fd67-9xthr   1/1     Terminating   0          50s   10.244.0.11   minikube   <none>           <none>
+calc-app-6f4d77fd67-9xthr   1/1     Terminating   0          50s   10.244.0.11   minikube   <none>           <none>
+calc-app-6f4d77fd67-n6gwf   0/1     Pending       0          0s    <none>        <none>     <none>           <none>
+calc-app-6f4d77fd67-n6gwf   0/1     Pending       0          0s    <none>        minikube   <none>           <none>
+calc-app-6f4d77fd67-n6gwf   0/1     ContainerCreating   0          0s    <none>        minikube   <none>           <none>
+calc-app-6f4d77fd67-n6gwf   0/1     ContainerCreating   0          0s    <none>        minikube   <none>           <none>
+calc-app-6f4d77fd67-n6gwf   1/1     Running             0          0s    10.244.0.17   minikube   <none>           <none>
+crash-demo                  0/1     Pending             0          0s    <none>        <none>     <none>           <none>
+crash-demo                  0/1     Pending             0          0s    <none>        minikube   <none>           <none>
+crash-demo                  0/1     ContainerCreating   0          0s    <none>        minikube   <none>           <none>
+crash-demo                  0/1     ContainerCreating   0          1s    <none>        minikube   <none>           <none>
+calc-app-6f4d77fd67-5vfjr   0/1     Error               0          50s   10.244.0.12   minikube   <none>           <none>
+calc-app-6f4d77fd67-hpngt   0/1     Error               0          31s   10.244.0.14   minikube   <none>           <none>
+calc-app-6f4d77fd67-bd2j9   0/1     Error               0          31s   10.244.0.15   minikube   <none>           <none>
+calc-app-6f4d77fd67-5vfjr   0/1     Error               0          51s   10.244.0.12   minikube   <none>           <none>
+calc-app-6f4d77fd67-5vfjr   0/1     Error               0          51s   10.244.0.12   minikube   <none>           <none>
+calc-app-6f4d77fd67-bd2j9   0/1     Error               0          32s   10.244.0.15   minikube   <none>           <none>
+calc-app-6f4d77fd67-bd2j9   0/1     Error               0          32s   10.244.0.15   minikube   <none>           <none>
+calc-app-6f4d77fd67-hpngt   0/1     Error               0          32s   10.244.0.14   minikube   <none>           <none>
+calc-app-6f4d77fd67-hpngt   0/1     Error               0          32s   10.244.0.14   minikube   <none>           <none>
